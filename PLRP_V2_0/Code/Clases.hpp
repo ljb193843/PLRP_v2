@@ -16,6 +16,7 @@ typedef unordered_map<string,double>::iterator unmap_st_db_it;
 class Contenedor{
 	string id;//ID DEL CONTENEDOR
 	string tipo;//TIPO DEL CONTENEDOR
+   double X,Y;//Ubicacion
    unmap_st_db demand;//DEMANDA POR DIA
 
 public:
@@ -29,6 +30,12 @@ public:
 	void set_demand(unmap_st_db d){
 		this->demand = d;
 	};
+   void set_X(double X){
+      this->X = X;
+   };
+   void set_Y(double Y){
+      this->Y = Y;
+   };
 	//GETTERS
 	string get_id(){
 		return this->id;
@@ -39,6 +46,12 @@ public:
 	unmap_st_db get_demand(){
 		return this->demand;
 	};
+   double get_X(){
+      return this->X;
+   };
+   double get_Y(){
+      return this->Y;
+   }
 };
 typedef unordered_map<string,Contenedor*> unmap_C;
 typedef unordered_map<string,Contenedor*>::iterator unmap_C_it;
@@ -95,6 +108,7 @@ class Deposito{
 
 		string id;//ID DEL DEPOSITO
 		unmap_V vehiculos;//VEHICULOS
+      double X,Y;//Ubicacion
 
 	public:
 		//SETTERS
@@ -105,6 +119,12 @@ class Deposito{
 
 			this->vehiculos = v;
 		};
+      void set_X(double X){
+         this->X = X;
+      };
+      void set_Y(double Y){
+         this->Y = Y;
+      };
 		//GETTERS
 		string get_id(){
 
@@ -114,9 +134,17 @@ class Deposito{
 
 			return this->vehiculos;
 		};
-
+      double get_X(){
+         return this->X;
+      };
+      double get_Y(){
+         return this->Y;
+      };
 
 };
+
+typedef unordered_map<string,Deposito*> unmap_D;
+typedef unordered_map<string,Deposito*>::iterator unmap_D_it;
 
 class Ruta{
 
