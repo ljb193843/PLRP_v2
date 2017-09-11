@@ -12,6 +12,10 @@ int main(int argc, char *argv[]){
    string lineD;
 
    unmap_C Contenedores;
+   unmap_C Cont_Pilas;
+   unmap_C Cont_Vidrio;
+   unmap_C Cont_Carton;
+   unmap_C Cont_Plastico;
    unmap_D Depositos;
    unmap_R Rutas;
    unmap_R Ruta_Pilas;
@@ -150,6 +154,18 @@ int main(int argc, char *argv[]){
          C->set_X(CX);
          C->set_Y(CY);
          Contenedores[id_C] = C;
+         if(type=="Plastico"){
+            Cont_Plastico[id_C] = C;
+         }
+         else if(type=="Pilas"){
+            Cont_Pilas[id_C] = C;
+         }
+         else if(type=="Carton y Papeles"){
+            Cont_Carton[id_C] = C;
+         }
+         else if(type=="Vidrio"){
+            Cont_Vidrio[id_C] = C;
+         }
          map_C.clear();
       }
       contRow  = contRow + 1;
@@ -222,6 +238,7 @@ int main(int argc, char *argv[]){
       contRow = contRow + 1;
 
    }
+
 
 
    /*
