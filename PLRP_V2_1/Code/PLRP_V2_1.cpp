@@ -1,11 +1,14 @@
 #include "Clases.hpp"
 #include "Print_Functions.hpp"
+#include "GML_generator.hpp"
 
 int main(int argc, char *argv[]){
 
 
 	ifstream conte(argv[1]);
 	ifstream depto(argv[2]);
+
+   ofstream GML(argv[3]);
 
 
    string lineC;
@@ -241,6 +244,8 @@ int main(int argc, char *argv[]){
 
 
 
+
+
    /*
    Print_Contenedores(Contenedores);
    cout << "Filas: " << contRow << endl;
@@ -249,5 +254,6 @@ int main(int argc, char *argv[]){
    Print_Depositos(Depositos);
    cout << "Depositos: " << Depositos.size() << endl;
    */
+   Generate_GML(Contenedores,Depositos,GML);
 
 }
