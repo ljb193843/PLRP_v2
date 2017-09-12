@@ -29,3 +29,18 @@ void Print_Ruta(unmap_R R){
    }
 
 }
+
+void Print_Dias(unmap_set dias){
+
+   unmap_set_it u_it;
+   set_st_it s_it;
+
+
+   for(u_it=dias.begin();u_it!=dias.end();u_it++){
+      cout << u_it->first << " :" << "\n";
+      for(s_it=u_it->second.begin();s_it!=u_it->second.end();s_it++){
+         cout << "\t" << *s_it << "\n";
+      }
+
+   }
+}

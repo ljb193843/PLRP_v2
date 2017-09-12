@@ -4,6 +4,8 @@
 #include <unordered_map>
 #include <stdlib.h>
 #include <string.h>
+#include <set>
+#include <vector>
 
 
 using namespace std;
@@ -12,6 +14,14 @@ typedef unordered_map<int,int> unmap_int;
 typedef unordered_map<int,int>::iterator unmap_int_it;
 typedef unordered_map<string,double> unmap_st_db;
 typedef unordered_map<string,double>::iterator unmap_st_db_it;
+typedef unordered_map<string,set<string> > unmap_set;
+typedef unordered_map<string,set<string> >::iterator unmap_set_it;
+typedef unordered_map<string,string> unmap_st_st;
+typedef unordered_map<string,string>::iterator unmap_st_st_it;
+typedef set<string> set_st;
+typedef set<string>::iterator set_st_it;
+typedef vector<string> vec_st;
+typedef vector<string>::iterator vec_st_it;
 
 class Contenedor{
 	string id;//ID DEL CONTENEDOR

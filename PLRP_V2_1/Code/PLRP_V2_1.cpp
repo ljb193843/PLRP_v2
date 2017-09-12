@@ -26,6 +26,18 @@ int main(int argc, char *argv[]){
    unmap_R Rutas_Carton;
    unmap_R Rutas_Plastico;
 
+   unmap_set dias;
+
+   vec_st dias_programados;
+   dias_programados.push_back("Lunes");
+   dias_programados.push_back("Martes");
+   dias_programados.push_back("Miercoles");
+   dias_programados.push_back("Jueves");
+   dias_programados.push_back("Viernes");
+   dias_programados.push_back("Sabado");
+   dias_programados.push_back("Domingo");
+
+
    int contRow = 1;
    unmap_st_db map_C;
 
@@ -78,6 +90,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Lunes"]= demand;
+                     dias["Lunes"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -89,6 +102,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Martes"]=demand;
+                     dias["Martes"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -100,6 +114,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Miercoles"]= demand;
+                     dias["Miercoles"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -111,6 +126,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Jueves"]= demand;
+                     dias["Jueves"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -122,6 +138,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Viernes"]= demand;
+                     dias["Viernes"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -133,6 +150,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Sabado"]= demand;
+                     dias["Sabado"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -143,6 +161,7 @@ int main(int argc, char *argv[]){
                   else{
                      demand = stod(cell);
                      map_C["Domingo"]= demand;
+                     dias["Domingo"].insert(type);
                   }
                   contCol = contCol + 1;
                   break;
@@ -245,15 +264,28 @@ int main(int argc, char *argv[]){
 
 
 
-
    /*
    Print_Contenedores(Contenedores);
-   cout << "Filas: " << contRow << endl;
-   cout << "Contenedores: " << Contenedores.size() << endl;
 
    Print_Depositos(Depositos);
-   cout << "Depositos: " << Depositos.size() << endl;
-   */
+
    Generate_GML(Contenedores,Depositos,GML);
+
+   Print_Dias(dias);
+   */
+   vec_st_it vec_it;
+
+   for(vec_it=dias_programados.begin();vec_it!=dias_programados.end();vec_it++){
+
+      string dia = *vec_it;
+
+      cout << "Hoy se recoge : " << endl;
+      set_st_it s_it;
+      for(s_it=dias[dia].begin();s_it!=dias[dia].end();s_it++){
+         cout << "\t" << *s_it << endl;
+      }
+
+   }
+
 
 }
