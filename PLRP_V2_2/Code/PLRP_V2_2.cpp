@@ -283,7 +283,7 @@ int main(int argc, char *argv[]){
 
       string dia = *vec_it;
 
-      cout << "Hoy se recoge : " << endl;
+      cout << "Hoy "+dia+" se recoge : " << endl;
       set_st_it s_it;
       for(s_it=dias[dia].begin();s_it!=dias[dia].end();s_it++){
          cout << "\t" << *s_it << endl;
