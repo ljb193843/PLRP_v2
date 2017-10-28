@@ -6,6 +6,7 @@
 #include <string.h>
 #include <set>
 #include <vector>
+#include <cmath>
 
 
 using namespace std;
@@ -22,6 +23,8 @@ typedef set<string> set_st;
 typedef set<string>::iterator set_st_it;
 typedef vector<string> vec_st;
 typedef vector<string>::iterator vec_st_it;
+typedef unordered_map<string,unordered_map<string,double> > unmap_st_unmap;
+typedef unordered_map<string,unordered_map<string,double> >::iterator unmap_st_unmap_it;
 
 class Contenedor{
 	string id;//ID DEL CONTENEDOR

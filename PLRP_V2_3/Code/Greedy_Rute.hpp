@@ -1,0 +1,3 @@
+void Greedy_Rute(){
+
+}

@@ -1,6 +1,8 @@
 #include "Clases.hpp"
 #include "Print_Functions.hpp"
 #include "GML_generator.hpp"
+#include "Inicio.hpp"
+#include "N_Search.hpp"
 
 int main(int argc, char *argv[]){
 
@@ -19,12 +21,12 @@ int main(int argc, char *argv[]){
    unmap_C Cont_Vidrio;
    unmap_C Cont_Carton;
    unmap_C Cont_Plastico;
+   unmap_C Cont_RAEE;
    unmap_D Depositos;
    unmap_R Rutas;
-   unmap_R Ruta_Pilas;
-   unmap_R Rutas_Vidrio;
-   unmap_R Rutas_Carton;
-   unmap_R Rutas_Plastico;
+
+   vector<unmap_C> > Conts_dias;
+
 
    unmap_set dias;
 
@@ -36,6 +38,8 @@ int main(int argc, char *argv[]){
    dias_programados.push_back("Viernes");
    dias_programados.push_back("Sabado");
    dias_programados.push_back("Domingo");
+
+   unmap_st_unmap costos;
 
 
    int contRow = 1;
@@ -76,14 +80,10 @@ int main(int argc, char *argv[]){
                case 4:
                   type = cell;
                   contCol = contCol + 1;
+                  cout << type << endl;
                   break;
 
                case 5:
-                  Cmax = stod(cell);
-                  contCol = contCol + 1;
-                  break;
-
-               case 6:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -95,7 +95,7 @@ int main(int argc, char *argv[]){
                   contCol = contCol + 1;
                   break;
 
-               case 7:
+               case 6:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -107,7 +107,7 @@ int main(int argc, char *argv[]){
                   contCol = contCol + 1;
                   break;
 
-               case 8:
+               case 7:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -119,7 +119,7 @@ int main(int argc, char *argv[]){
                   contCol = contCol + 1;
                   break;
 
-               case 9:
+               case 8:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -131,7 +131,7 @@ int main(int argc, char *argv[]){
                   contCol = contCol + 1;
                   break;
 
-               case 10:
+               case 9:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -143,7 +143,7 @@ int main(int argc, char *argv[]){
                   contCol = contCol + 1;
                   break;
 
-               case 11:
+               case 10:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -154,7 +154,7 @@ int main(int argc, char *argv[]){
                   }
                   contCol = contCol + 1;
                   break;
-               case 12:
+               case 11:
                   if(cell==""){
                      //cout << "vacio" << endl;
                   }
@@ -169,6 +169,7 @@ int main(int argc, char *argv[]){
             }
          }
       }
+      //Asignar atributos Contenedor
       if(contRow!=1){
          C->set_id(id_C);
          C->set_tipo(type);
@@ -187,6 +188,9 @@ int main(int argc, char *argv[]){
          }
          else if(type=="Vidrio"){
             Cont_Vidrio[id_C] = C;
+         }
+         else if(type=="RAEE"){
+            Cont_RAEE[id_C] = C;
          }
          map_C.clear();
       }
@@ -245,6 +249,7 @@ int main(int argc, char *argv[]){
       }
 
       if(contRow!=1){
+         //Generear Vehiculos
          for(int i=1;i<(VS+1);i++){
             Vehiculo *V = new Vehiculo;
             string id_V = D->get_id()+"_V"+to_string(i);
@@ -279,14 +284,31 @@ int main(int argc, char *argv[]){
    */
    vec_st_it vec_it;
 
+   Asignar_Costos(costos,Contenedores,Depositos);
+
    for(vec_it=dias_programados.begin();vec_it!=dias_programados.end();vec_it++){
 
       string dia = *vec_it;
 
-      cout << "Hoy "+dia+" se recoge : " << endl;
+      //cout << "Hoy "+dia+" se recoge : " << endl;
       set_st_it s_it;
       for(s_it=dias[dia].begin();s_it!=dias[dia].end();s_it++){
-         cout << "\t" << *s_it << endl;
+         //cout << "\t" << *s_it << endl;
+         if(*s_it=="Plastico"){
+            Conts_dias.push_back(Cont_Plastico);
+         }
+         else if(*s_it=="Vidrio"){
+
+         }
+         else if(*s_it=="Carton"){
+
+         }
+         else if(*s_it=="RAEE"){
+
+         }
+         else if(*s_it==""){
+
+         }
       }
 
    }
