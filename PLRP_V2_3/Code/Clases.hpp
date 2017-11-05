@@ -7,6 +7,8 @@
 #include <set>
 #include <vector>
 #include <cmath>
+#include <climits>
+#include <cfloat>
 
 
 using namespace std;
@@ -25,6 +27,9 @@ typedef vector<string> vec_st;
 typedef vector<string>::iterator vec_st_it;
 typedef unordered_map<string,unordered_map<string,double> > unmap_st_unmap;
 typedef unordered_map<string,unordered_map<string,double> >::iterator unmap_st_unmap_it;
+typedef pair<double,double> Pdouble;
+typedef unordered_map<string,Pdouble> unmap_st_Pdouble;
+typedef unordered_map<string,Pdouble>::iterator unmap_st_Pdouble_it;
 
 class Contenedor{
 	string id;//ID DEL CONTENEDOR
@@ -72,8 +77,7 @@ typedef unordered_map<string,Contenedor*>::iterator unmap_C_it;
 class Vehiculo{
 
 	string id;//IDENTIFICADOR
-   unmap_st_db capacidad; //CAPACIDAD POR TIPO
-	double MaxCapacidad;//CAPACIDAD MAXIMA
+   unmap_st_Pdouble capacidad; //CAPACIDAD POR TIPO
 	double costoUso;//COSTO DE USAR EL VEHICULO
 
 	public:
@@ -83,13 +87,9 @@ class Vehiculo{
 
 				this->id = id;
 			};
-			void set_capacidad (string tipo,double oferta){
+			void set_capacidad (string tipo,Pdouble oferta){
 
 				this->capacidad[tipo] = oferta;
-			};
-			void set_MaxCapacidad(double maxcapacidad){
-
-				this->MaxCapacidad = maxcapacidad;
 			};
 			void set_costoUso(double costoUso){
 
@@ -100,13 +100,9 @@ class Vehiculo{
 
 				return this->id;
 			};
-			double get_capacidad(string tipo){
+			Pdouble get_capacidad(string tipo){
 
 				return this->capacidad[tipo];
-			};
-			double get_MaxCapacidad(){
-
-				return this->MaxCapacidad;
 			};
 			double get_costoUso(){
 
@@ -166,10 +162,11 @@ class Ruta{
 	Vehiculo* vehic;//VEHICULO ASOCIADO A LA RUTA
 	Deposito* dept;//DEPOSTIO DE LA RUTA
 	unmap_C contenedores;//CONTENEDORES DE LA RUTA
+   int contV;//Contador de vehiculos usados
 
 	public:
 			//SETTERS
-			void set_id(int id){
+			void set_id(string id){
 				this->id = id;
 			};
 			void set_vehiculo(Vehiculo* v){
@@ -184,6 +181,9 @@ class Ruta{
 
 				this->contenedores = c;
 			};
+         void set_contV(int contV){
+            this->contV = contV;
+         };
          //GETTERS
          string get_id(){
 
