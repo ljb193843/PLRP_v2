@@ -3,6 +3,9 @@
 #include "GML_generator.hpp"
 #include "Inicio.hpp"
 #include "N_Search.hpp"
+#include "CrearRuta.hpp"
+#include "Greedy_Rute.hpp"
+
 
 int main(int argc, char *argv[]){
 
@@ -25,7 +28,7 @@ int main(int argc, char *argv[]){
    unmap_D Depositos;
    unmap_R Rutas;
 
-   vector<unmap_C> > Conts_dias;
+   vector<unmap_C> Conts_dias;
 
 
    unmap_set dias;
@@ -40,6 +43,9 @@ int main(int argc, char *argv[]){
    dias_programados.push_back("Domingo");
 
    unmap_st_unmap costos;
+
+   //contador de rutas
+   int contR = 1;
 
 
    int contRow = 1;
@@ -80,7 +86,7 @@ int main(int argc, char *argv[]){
                case 4:
                   type = cell;
                   contCol = contCol + 1;
-                  cout << type << endl;
+                  //cout << type << endl;
                   break;
 
                case 5:
@@ -256,10 +262,10 @@ int main(int argc, char *argv[]){
             V->set_id(D->get_id()+"_V"+to_string(i));
             V->set_costoUso(CV);
             vehiculos[id_V]=V;
-            V->set_capacidad("Pilas",0);
-            V->set_capacidad("Carton y Papeles",0);
-            V->set_capacidad("Vidrio",0);
-            V->set_capacidad("Plastico",0);
+            V->set_capacidad("Pilas",{0,5000});
+            V->set_capacidad("Carton y Papeles",{0,5000});
+            V->set_capacidad("Vidrio",{0,5000});
+            V->set_capacidad("Plastico",{0,5000});
          }
          D->set_vehiculo(vehiculos);
          vehiculos.clear();
@@ -290,26 +296,32 @@ int main(int argc, char *argv[]){
 
       string dia = *vec_it;
 
-      //cout << "Hoy "+dia+" se recoge : " << endl;
+      cout << "Hoy "+dia+" se recoge : " << endl;
       set_st_it s_it;
       for(s_it=dias[dia].begin();s_it!=dias[dia].end();s_it++){
-         //cout << "\t" << *s_it << endl;
+         cout << "\t" << *s_it << endl;
          if(*s_it=="Plastico"){
             Conts_dias.push_back(Cont_Plastico);
          }
          else if(*s_it=="Vidrio"){
-
+            Conts_dias.push_back(Cont_Vidrio);
          }
          else if(*s_it=="Carton"){
-
+            Conts_dias.push_back(Cont_Carton);
          }
          else if(*s_it=="RAEE"){
-
+            Conts_dias.push_back(Cont_RAEE);
          }
-         else if(*s_it==""){
-
+         else if(*s_it=="Pilas"){
+            Conts_dias.push_back(Cont_Pilas);
          }
       }
+
+
+
+      Greedy_Rute(dia,costos,Conts_dias,Rutas,Depositos,contR);
+
+      Conts_dias.clear();
 
    }
 
