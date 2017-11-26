@@ -1,0 +1,431 @@
+Rutas de Contenedores de Pilas para el día Lunes
+R8: 	
+	C189
+	C113
+	C49
+	C171
+	C182
+R10: 	
+	C27
+	C166
+	C129
+	C111
+R6: 	
+	C6
+	C146
+	C164
+	C134
+	C85
+R9: 	
+	C82
+	C117
+	C16
+	C2
+R7: 	
+	C34
+	C184
+	C141
+	C174
+R5: 	
+	C31
+	C63
+	C140
+	C149
+	C44
+R4: 	
+	C88
+	C187
+	C19
+	C152
+R3: 	
+	C135
+	C92
+	C199
+	C39
+	C161
+	C3
+	C102
+	C165
+R2: 	
+	C172
+	C127
+	C104
+	C157
+	C77
+	C47
+R1: 	
+	C138
+	C55
+	C26
+	C159
+Rutas de Contenedores de Pilas para el día Martes
+R8: 	
+	C16
+	C82
+	C113
+	C189
+R6: 	
+	C159
+	C26
+	C55
+	C47
+	C77
+R9: 	
+	C27
+	C166
+	C129
+	C111
+R7: 	
+	C2
+	C117
+	C127
+	C104
+R5: 	
+	C182
+	C34
+	C184
+	C141
+R4: 	
+	C174
+	C6
+	C146
+	C164
+	C134
+	C85
+R3: 	
+	C171
+	C138
+	C172
+	C31
+	C63
+	C140
+	C149
+	C49
+	C44
+	C135
+R2: 	
+	C19
+	C152
+	C92
+	C199
+	C88
+	C39
+	C161
+R1: 	
+	C187
+	C3
+	C165
+	C102
+	C157
+Rutas de Contenedores de Cartones y Papeles para el día Miercoles
+R11: 	
+	C186
+R1: 	
+	C188
+	C72
+	C42
+	C192
+	C181
+R2: 	
+	C23
+	C126
+	C66
+	C120
+	C112
+	C195
+	C18
+R3: 	
+	C110
+	C131
+	C62
+	C116
+	C96
+	C156
+R4: 	
+	C169
+	C177
+	C162
+	C20
+	C122
+	C154
+R7: 	
+	C79
+	C95
+	C78
+	C35
+	C176
+R9: 	
+	C179
+	C128
+	C9
+	C183
+	C4
+R6: 	
+	C54
+	C109
+	C197
+	C93
+R10: 	
+	C186
+	C10
+	C70
+	C139
+R5: 	
+	C48
+	C105
+	C190
+	C118
+	C7
+	C137
+R8: 	
+	C73
+	C170
+	C11
+	C123
+	C12
+	C194
+	C56
+Rutas de Contenedores de Cartones y Papeles para el día Jueves
+R11: 	
+	C186
+	C10
+	C70
+	C139
+R1: 	
+	C35
+	C188
+	C72
+	C42
+	C192
+	C181
+R2: 	
+	C96
+	C66
+	C112
+	C195
+	C18
+R3: 	
+	C62
+	C156
+	C23
+	C126
+	C120
+R4: 	
+	C95
+	C190
+	C122
+	C154
+	C110
+	C131
+	C116
+R7: 	
+	C176
+	C109
+	C197
+	C93
+R9: 	
+	C194
+	C73
+	C170
+	C11
+	C123
+R6: 	
+	C78
+	C48
+	C105
+	C7
+R10: 	
+	C179
+	C128
+	C9
+	C183
+	C4
+R5: 	
+	C118
+	C137
+	C177
+	C162
+	C20
+R8: 	
+	C12
+	C56
+	C169
+	C54
+	C79
+Rutas de Contenedores de Plástico para el día Viernes
+R11: 	
+	C45
+	C100
+	C91
+	C89
+R1: 	
+	C132
+	C115
+	C33
+	C103
+	C41
+R2: 	
+	C67
+	C17
+	C150
+R3: 	
+	C107
+	C142
+	C119
+	C86
+	C43
+	C74
+	C81
+	C173
+R4: 	
+	C65
+	C167
+	C180
+	C14
+R7: 	
+	C175
+	C21
+	C90
+	C147
+R9: 	
+	C32
+	C83
+	C40
+R6: 	
+	C108
+	C133
+	C136
+	C52
+	C168
+R10: 	
+	C71
+	C185
+	C25
+R5: 	
+	C143
+	C1
+	C121
+	C5
+	C28
+	C158
+R8: 	
+	C106
+	C198
+	C101
+Rutas de Contenedores de Plástico para el día Sabado
+R9: 	
+	C25
+	C90
+	C108
+R7: 	
+	C143
+	C185
+	C71
+	C89
+	C91
+	C100
+	C45
+	C175
+	C142
+R6: 	
+	C143
+	C1
+	C52
+	C168
+	C41
+	C103
+	C115
+R8: 	
+	C147
+	C133
+	C136
+R5: 	
+	C121
+	C5
+	C158
+	C65
+R4: 	
+	C167
+	C28
+	C180
+	C107
+	C119
+	C14
+	C86
+R3: 	
+	C43
+	C74
+	C81
+	C173
+	C132
+	C33
+	C150
+R2: 	
+	C67
+	C40
+	C17
+	C106
+	C198
+R1: 	
+	C101
+	C21
+	C32
+	C83
+Rutas de Contenedores de Vidrio para el día Domingo
+R8: 	
+	C153
+	C145
+	C97
+R6: 	
+	C153
+	C84
+	C124
+	C51
+	C30
+	C193
+	C87
+R7: 	
+	C46
+	C61
+	C68
+	C24
+	C8
+R5: 	
+	C196
+	C60
+	C50
+	C76
+	C13
+R4: 	
+	C22
+	C178
+	C59
+	C15
+	C94
+	C80
+R3: 	
+	C75
+	C53
+	C57
+	C191
+R2: 	
+	C99
+	C144
+	C148
+	C155
+	C38
+	C163
+R1: 	
+	C69
+	C64
+	C114
+	C58
+	C151
+	C37
+	C98
+	C160
+	C29
+Modo Alta Congestion
+Tiempo de la Simulacion: 6.28561 segundos
+Costo Total: 902363.356873
+Vehiculos Involucrados: 69

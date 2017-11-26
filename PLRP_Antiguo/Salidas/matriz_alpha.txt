@@ -1,0 +1,64 @@
+R1: 	
+	C37
+	C96
+	C17
+	C98
+R2: 	
+	C64
+	C31
+	C72
+R3: 	
+	C42
+	C19
+	C77
+R4: 	
+	C76
+R5: 	
+	C89
+R1: 	
+	C35
+	C98
+R2: 	
+	C58
+	C89
+R3: 	
+	C63
+	C24
+	C23
+	C77
+R4: 	
+	C77
+R1: 	
+	C82
+	C50
+	C9
+R2: 	
+	C56
+	C11
+	C69
+R3: 	
+	C83
+	C15
+	C95
+R4: 	
+	C45
+	C48
+	C26
+	C67
+R5: 	
+	C75
+	C10
+	C99
+R6: 	
+	C32
+R7: 	
+	C87
+R8: 	
+	C66
+	C53
+	C20
+	C81
+Modo Alta Congestion
+Tiempo de la Simulacion: 0.418944 segundos
+Costo Total: 619268
+Vehiculos Involucrados: 17

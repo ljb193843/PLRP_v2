@@ -1,0 +1,3 @@
+all:
+		g++ -std=c++11 tipos.cpp -o exe
+		./exe Clientes50.csv 50

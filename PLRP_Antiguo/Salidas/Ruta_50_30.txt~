@@ -1,0 +1,110 @@
+Rutas de Contenedores de Pilas para el día Lunes
+R1: 	
+	C4
+	C17
+	C46
+	C23
+	C29
+	C31
+Rutas de Contenedores de Pilas para el día Martes
+R2: 	
+	C23
+	C29
+R1: 	
+	C11
+	C46
+	C17
+	C4
+Rutas de Contenedores de Cartones y Papeles para el día Miercoles
+R3: 	
+	C38
+	C24
+	C14
+	C19
+R2: 	
+	C12
+	C30
+	C43
+	C13
+	C3
+	C44
+	C2
+R1: 	
+	C18
+	C47
+	C48
+	C15
+	C10
+Rutas de Contenedores de Cartones y Papeles para el día Jueves
+R4: 	
+	C38
+R3: 	
+	C12
+	C14
+	C19
+	C30
+	C44
+R2: 	
+	C43
+	C13
+	C3
+	C2
+	C47
+R1: 	
+	C24
+	C18
+	C48
+	C15
+	C10
+Rutas de Contenedores de Plástico para el día Viernes
+R3: 	
+	C21
+R2: 	
+	C27
+	C6
+	C34
+	C22
+	C28
+R1: 	
+	C9
+	C49
+	C25
+	C40
+	C41
+Rutas de Contenedores de Plástico para el día Sabado
+R3: 	
+	C21
+R2: 	
+	C27
+	C6
+	C34
+	C9
+	C22
+R1: 	
+	C28
+	C49
+	C25
+	C40
+	C41
+Rutas de Contenedores de Vidrio para el día Domingo
+R3: 	
+	C35
+	C42
+R2: 	
+	C16
+	C36
+	C45
+	C26
+	C5
+R1: 	
+	C1
+	C8
+	C20
+	C35
+	C7
+	C32
+	C39
+Modo Alta Congestion
+Tiempo de la Simulacion: 0.160484 segundos
+Costo Total: 1337675.563706
+Vehiculos Involucrados: 19
